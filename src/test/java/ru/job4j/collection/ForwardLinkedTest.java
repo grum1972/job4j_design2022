@@ -2,8 +2,10 @@ package ru.job4j.collection;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -41,5 +43,25 @@ class ForwardLinkedTest {
         linked.deleteFirst();
         Iterator<Integer> it = linked.iterator();
         assertThat(it.next()).isEqualTo(2);
+    }
+
+    @Test
+    void whenSize0ThenReturnFalse() {
+        linked = new ForwardLinked<>();
+        assertThat(linked.revert()).isFalse();
+    }
+
+    @Test
+    void whenSize1ThenReturnFalse() {
+        linked = new ForwardLinked<>();
+        linked.add(1);
+        assertThat(linked.revert()).isFalse();
+    }
+
+    @Test
+    void whenAddAndRevertTrue() {
+        assertThat(linked).containsSequence(1, 2, 3, 4);
+        assertThat(linked.revert()).isTrue();
+        assertThat(linked).containsSequence(4, 3, 2, 1);
     }
 }
