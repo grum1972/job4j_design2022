@@ -1,1 +1,14 @@
-ru\job4j\AppTest.class
+ru\job4j\collection\ForwardLinkedTest.class
+ru\job4j\map\SimpleMapTest.class
+ru\job4j\iterator\ListUtilsTest.class
+ru\job4j\iterator\EvenNumbersIteratorTest.class
+ru\job4j\set\SimpleSetTest.class
+ru\job4j\collection\SimpleStackTest.class
+ru\job4j\collection\SimpleQueueTest.class
+ru\job4j\collection\SimpleArrayListTest.class
+ru\job4j\collection\SimpleLinkedListTest.class
+ru\job4j\iterator\BackwardArrayItTest.class
+ru\job4j\iterator\ArrayItTest.class
+ru\job4j\iterator\generics\UserStoreTest.class
+ru\job4j\iterator\FlatMapTest.class
+ru\job4j\iterator\MatrixItTest.class
